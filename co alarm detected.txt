@@ -1,0 +1,185 @@
+detection:Found a smoke alarm!
+0.75
+
+##### of pulses in 5 SEC's      0
+Checking 0 num pulses for smoke
+0.5
+Checking 0 num pulses for CO
+Checking 0 num pulses for CO
+***   Found smoke alarm  ***
+
+Main Window:
+
+SMOKE PREDICTIONS [1, 0, 0]
+CO PREDICTIONS [0, 0, 0, 0, 0]
+WATER PREDICTIONS [0, 0, 0]
+
+Half Window:
+
+SMOKE PREDICTIONS [0, 0, 1]
+CO PREDICTIONS [0, 0, 0, 0, 0]
+WATER PREDICTIONS [0, 0, 0]
+Predicted for main: Nothing
+Predicted for half: Smoke
+detection:Detected a single smoke, waiting for a second smoke detection
+Predicted for combination: Nothing
+Loop took 2.432771 seconds
+prediction-loop-runtime-seconds:2.432771
+Waiting for sample...
+Predicting for sample, queue size
+Num windows 512.0 Sending max RMS value 164.501935304 to audio socket
+108
+Frequency 3348.837209
+Min value 123.190936, Max value 177.776943, diff 54.586006
+Pct diff:  44.3100831508
+Using 164.130441 for smoke and co threshold
+Smoke pulse start 218, stop 266, duration 0.768000 seconds, time 3.888000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.75
+Smoke pulse start 217, stop 269, duration 0.832000 seconds, time 3.904000
+Found possible CO pulse 0.832000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.5
+CO pulse start 218, stop 226, duration 0.128000 seconds, time 3.568000
+CO pulse start 230, stop 238, duration 0.128000 seconds, time 3.760000
+CO pulse start 243, stop 251, duration 0.128000 seconds, time 3.968000
+CO pulse start 255, stop 264, duration 0.144000 seconds, time 4.168000
+Checking 4 num pulses for CO
+0.192
+0.208
+0.2
+Not using 116 because it's too close to 108
+Not using 117 because it's too close to 108
+Not using 108 because it's too close to 108
+Size of pulse vals 33 + 33 = 327
+Pulses (177.280490,2.030991) Sampled (134.359832,7.081458)
+detection:Detect a CO alarm!
+Checking 0 num pulses for CO
+%%%   Found CO alarm  %%%
+105
+Frequency 3255.813953
+Min value 121.888523, Max value 153.292036, diff 31.403512
+Pct diff:  25.7641256375
+Using 145.441157 for smoke and co threshold
+
+##### of pulses in 5 SEC's      0
+Checking 0 num pulses for smoke
+0.75
+Smoke pulse start 34, stop 86, duration 0.832000 seconds, time 0.976000
+Found possible CO pulse 0.832000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.5
+CO pulse start 8, stop 15, duration 0.112000 seconds, time 0.200000
+Checking 1 num pulses for CO
+CO pulse start 8, stop 15, duration 0.112000 seconds, time 0.200000
+CO pulse start 46, stop 52, duration 0.096000 seconds, time 0.800000
+Checking 2 num pulses for CO
+Checking CO echo pulse
+Too many large pulses
+
+Main Window:
+
+SMOKE PREDICTIONS [0, 1, 0]
+CO PREDICTIONS [0, 0, 0, 0, 1]
+WATER PREDICTIONS [0, 0, 0]
+
+Half Window:
+
+SMOKE PREDICTIONS [1, 0, 0]
+CO PREDICTIONS [0, 0, 0, 1, 0]
+WATER PREDICTIONS [0, 0, 0]
+Predicted for main: CO
+Predicted for half: Nothing
+detection:Detected a single smoke, waiting for a second smoke detection
+Predicted for combination: Nothing
+Loop took 1.618628 seconds
+prediction-loop-runtime-seconds:1.618628
+Waiting for sample...
+Predicting for sample, queue size
+Num windows 512.0 Sending max RMS value 190.628919017 to audio socket
+108
+Frequency 3348.837209
+Min value 124.587692, Max value 178.168247, diff 53.580555
+Pct diff:  43.0062989979
+Using 164.773108 for smoke and co threshold
+Smoke pulse start 252, stop 300, duration 0.768000 seconds, time 4.432000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.75
+Smoke pulse start 251, stop 303, duration 0.832000 seconds, time 4.448000
+Found possible CO pulse 0.832000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.5
+CO pulse start 252, stop 260, duration 0.128000 seconds, time 4.112000
+CO pulse start 264, stop 273, duration 0.144000 seconds, time 4.312000
+CO pulse start 277, stop 285, duration 0.128000 seconds, time 4.512000
+CO pulse start 290, stop 298, duration 0.128000 seconds, time 4.720000
+Checking 4 num pulses for CO
+0.2
+0.2
+0.208
+Not using 101 because it's too close to 108
+Size of pulse vals 33 + 33 = 327
+Pulses (177.643862,2.054963) Sampled (135.409482,10.150196)
+detection:Detect a CO alarm!
+Checking 0 num pulses for CO
+%%%   Found CO alarm  %%%
+108
+Frequency 3348.837209
+Min value 123.881478, Max value 177.776943, diff 53.895465
+Pct diff:  43.5056683397
+Using 164.303076 for smoke and co threshold
+Smoke pulse start 54, stop 102, duration 0.768000 seconds, time 1.264000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.75
+Smoke pulse start 53, stop 105, duration 0.832000 seconds, time 1.280000
+Found possible CO pulse 0.832000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.5
+CO pulse start 54, stop 62, duration 0.128000 seconds, time 0.944000
+CO pulse start 66, stop 74, duration 0.128000 seconds, time 1.136000
+CO pulse start 79, stop 87, duration 0.128000 seconds, time 1.344000
+CO pulse start 91, stop 100, duration 0.144000 seconds, time 1.544000
+Checking 4 num pulses for CO
+0.192
+0.208
+0.2
+Not using 114 because it's too close to 108
+Not using 110 because it's too close to 108
+Size of pulse vals 33 + 33 = 327
+Pulses (177.280490,2.030991) Sampled (134.433743,10.164979)
+detection:Detect a CO alarm!
+Checking 0 num pulses for CO
+%%%   Found CO alarm  %%%
+
+Main Window:
+
+SMOKE PREDICTIONS [0, 0, 0]
+CO PREDICTIONS [0, 0, 1, 0, 1]
+WATER PREDICTIONS [0, 0, 0]
+
+Half Window:
+
+SMOKE PREDICTIONS [0, 0, 0]
+CO PREDICTIONS [0, 1, 0, 1, 0]
+WATER PREDICTIONS [0, 0, 0]
+Predicted for main: CO
+Predicted for half: Nothing
+detection:Detected a single CO, waiting for a second CO detection
+Predicted for combination: Nothing
+Loop took 1.604134 seconds
+prediction-loop-runtime-seconds:1.604134
+Waiting for sample...

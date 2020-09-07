@@ -1,0 +1,79 @@
+debian@debian-armhf:/mnt/data$ echo "$(ps aux)"
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.1  0.2   1688   624 ?        Ss    1999   0:01 init [2]
+root         2  0.0  0.0      0     0 ?        S     1999   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S     1999   0:00 [ksoftirqd/0]
+root         6  0.0  0.0      0     0 ?        S<    1999   0:00 [khelper]
+root         7  0.0  0.0      0     0 ?        S     1999   0:00 [kdevtmpfs]
+root         8  0.0  0.0      0     0 ?        S<    1999   0:00 [netns]
+root       238  0.0  0.0      0     0 ?        S     1999   0:00 [sync_supers]
+root       240  0.0  0.0      0     0 ?        S     1999   0:00 [bdi-default]
+root       242  0.0  0.0      0     0 ?        S<    1999   0:00 [kblockd]
+root       253  0.0  0.0      0     0 ?        S<    1999   0:00 [omap2_mcspi]
+root       261  0.0  0.0      0     0 ?        S     1999   0:00 [khubd]
+root       371  0.0  0.0      0     0 ?        S<    1999   0:00 [musb-hdrc.0]
+root       376  0.0  0.0      0     0 ?        S<    1999   0:00 [musb-hdrc.1]
+root       378  0.0  0.0      0     0 ?        S<    1999   0:00 [rpciod]
+root       380  0.9  0.0      0     0 ?        S     1999   0:09 [kworker/0:1]
+root       390  0.0  0.0      0     0 ?        S     1999   0:00 [kswapd0]
+root       391  0.0  0.0      0     0 ?        S     1999   0:00 [fsnotify_mark]
+root       392  0.0  0.0      0     0 ?        S<    1999   0:00 [nfsiod]
+root       394  0.0  0.0      0     0 ?        S<    1999   0:00 [crypto]
+root       408  0.0  0.0      0     0 ?        S     1999   0:00 [ocf_0]
+root       409  0.0  0.0      0     0 ?        S     1999   0:00 [ocf_ret_0]
+root       419  0.0  0.0      0     0 ?        S<    1999   0:00 [OMAP UART0]
+root       421  0.0  0.0      0     0 ?        S<    1999   0:00 [OMAP UART1]
+root       423  0.0  0.0      0     0 ?        S<    1999   0:00 [OMAP UART2]
+root       425  0.0  0.0      0     0 ?        S<    1999   0:00 [OMAP UART3]
+root       427  0.0  0.0      0     0 ?        S<    1999   0:00 [OMAP UART4]
+root       429  0.0  0.0      0     0 ?        S<    1999   0:00 [OMAP UART5]
+root       503  0.0  0.0      0     0 ?        S<    1999   0:00 [kpsmoused]
+root       509  0.0  0.0      0     0 ?        S     1999   0:00 [kworker/u:2]
+root       574  0.0  0.0      0     0 ?        S     1999   0:00 [kworker/u:3]
+root       768  0.1  0.0      0     0 ?        S     1999   0:01 [mmcqd/1]
+root       769  0.0  0.0      0     0 ?        S     1999   0:00 [mmcqd/1boot0]
+root       770  0.0  0.0      0     0 ?        S     1999   0:00 [mmcqd/1boot1]
+root       784  0.0  0.0      0     0 ?        S    00:00   0:00 [jbd2/mmcblk0p3-]
+root       785  0.0  0.0      0     0 ?        S<   00:00   0:00 [ext4-dio-unwrit]
+root       898  0.0  0.3   2300   928 ?        Ss   00:00   0:00 udevd --daemon
+root      1001  0.0  0.2   2296   712 ?        S    00:00   0:00 udevd --daemon
+root      1027  0.1  0.1   1368   348 ?        S    00:00   0:01 /bin/sh -e /lib/udev/net.agent
+root      1192  0.0  0.0      0     0 ?        S    00:00   0:00 [flush-179:0]
+root      1860  0.0  0.0      0     0 ?        S    00:00   0:00 [jbd2/mmcblk0p4-]
+root      1861  0.0  0.0      0     0 ?        S<   00:00   0:00 [ext4-dio-unwrit]
+root      2778  7.1  3.6  21624  9288 ?        Sl   00:01   0:58 /usr/lib/leeonl/customer_image/audio_detect/supervisor /usr/lib/leeonl/customer_image/audio_detect//prediction_loop
+root      2808  0.0  0.0      0     0 ?        S<   00:01   0:00 [hci0]
+root      2822  0.3  5.1  66760 13080 ?        Sl   00:01   0:02 /usr/local/bin/node /usr/lib/leeonl/customer_image/leeo_services/leeo_forever.js
+root      2825  0.0  0.0   2256   196 ?        S    00:01   0:00 /usr/local/sbin/hciattach /dev/ttyO1 texas 3000000
+root      2844  0.0  0.5  27372  1388 ?        Sl   00:01   0:00 /usr/sbin/rsyslogd -c5
+root      2916  0.0  0.3   3384   832 ?        Ss   00:01   0:00 /usr/sbin/cron
+102       2959  0.0  0.2   2588   572 ?        Ss   00:01   0:00 /usr/bin/dbus-daemon --system
+ntp       2991  0.0  0.5   4680  1324 ?        Ss   00:01   0:00 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 103:108
+root      3002  0.0  0.3   4464   872 ?        S    00:01   0:00 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 103:108
+daemon    3027  0.0  0.1   1372   440 ?        Ss   00:01   0:00 /usr/sbin/uptimed
+root      3043  0.0  0.4   2788  1176 ttyUSB0  Ss   00:01   0:00 /bin/login --
+root      3062  1.7  6.4  28356 16464 pts/0    Ss+  00:01   0:14 /usr/lib/leeonl/customer_image/audio_detect//prediction_loop
+root      3069  1.2  8.4  83468 21432 ?        Sl   00:01   0:09 /usr/local/bin/node ./leeo_service.js
+root      3096  2.5  0.5  43824  1348 ?        Sl   00:02   0:20 /usr/lib/leeonl/customer_image/cpp_offload/sensorLoop -d INFO -c /usr/lib/leeonl/customer_image/leeo_services/leeo_config.json
+root      3112  0.0  0.0      0     0 ?        S    00:02   0:00 [kworker/0:2]
+debian    3113  0.0  0.6   4136  1600 ttyUSB0  S+   00:02   0:00 -bash
+root      3116 27.7  5.4  28240 13744 pts/0    S+   00:02   3:45 /usr/lib/leeonl/customer_image/audio_detect//prediction_loop
+root      3130  0.1  3.6  34080  9276 ?        Sl   00:02   0:01 /usr/local/bin/node /usr/lib/leeonl/customer_image/leeo_services/bluetooth-wifi-config.js
+root      3136  0.0  0.3   2784   904 ?        S    00:02   0:00 /usr/lib/leeonl/customer_image/node_modules/bleno/lib/linux/../../build/Release/hci-ble
+root      3137  0.0  0.3   2784   864 ?        S    00:02   0:00 /usr/lib/leeonl/customer_image/node_modules/bleno/lib/linux/../../build/Release/l2cap-ble
+root      5224  0.0  0.1   1504   484 ?        Ss   00:12   0:00 /usr/bin/timeout 5m /opt/leeo/bin/network_diag.sh
+root      5225  0.0  0.5   2352  1288 ?        S    00:12   0:00 /bin/bash /opt/leeo/bin/network_diag.sh
+root      5964  0.0  0.0      0     0 ?        S    00:14   0:00 [kworker/0:0]
+root      6030  0.0  0.2   2296   668 ?        S    00:14   0:00 udevd --daemon
+root      6032  0.0  0.0      0     0 ?        S<   00:14   0:00 [cfg80211]
+root      6038  0.0  0.0      0     0 ?        S<   00:14   0:00 [wl12xx_wq]
+root      6039  0.0  0.0      0     0 ?        S    00:14   0:00 [irq/191-wl12xx]
+root      6049  0.1  0.1   1368   312 ?        S    00:14   0:00 /bin/sh -e /lib/udev/net.agent
+root      6061  0.0  0.1   1368   492 ?        S    00:14   0:00 /bin/sh -e /etc/init.d/networking restart
+root      6122  0.0  0.1   1336   460 ?        S    00:14   0:00 ifup -a --exclude=lo
+root      6145  0.0  0.3   4632   916 ?        Ss   00:14   0:00 /sbin/wpa_supplicant -s -B -P /var/run/wpa_supplicant.wlan0.pid -i wlan0 -D nl80211,wext -c /mnt/data/wpa_supplicant.conf
+root      6155  0.0  0.1   1368   436 ?        S    00:14   0:00 /bin/sh -c dhclient -v -pf /run/dhclient.wlan0.pid -lf /var/lib/dhcp/dhclient.wlan0.leases wlan0 ?
+root      6156  0.0  1.1   4892  2872 ?        S    00:14   0:00 dhclient -v -pf /run/dhclient.wlan0.pid -lf /var/lib/dhcp/dhclient.wlan0.leases wlan0
+root      6444  0.0  0.1   1320   380 ?        S    00:15   0:00 sleep 1
+root      6447  0.0  0.1   1320   380 ?        S    00:15   0:00 sleep 1
+debian    6448  0.0  0.3   4020   984 ttyUSB0  R+   00:15   0:00 ps aux

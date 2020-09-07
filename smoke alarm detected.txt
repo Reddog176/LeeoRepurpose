@@ -1,0 +1,123 @@
+***   Found smoke alarm  ***
+
+Main Window:
+
+SMOKE PREDICTIONS [1]
+CO PREDICTIONS [0, 0, 0, 0, 0]
+WATER PREDICTIONS [0, 0, 0]
+
+Half Window:
+
+SMOKE PREDICTIONS [1, 1]
+CO PREDICTIONS [0, 0, 0, 0, 0]
+WATER PREDICTIONS [0, 0, 0]
+Predicted for main: Smoke
+Predicted for half: Smoke
+detection:Detected two smoke alarms!!!
+Predicted for combination: Smoke
+
+
+Alarm detected!
+
+
+Loop took 1.816915 seconds
+prediction-loop-runtime-seconds:1.816915
+Waiting for sample...
+Predicting for sample, queue size
+Num windows 512.0 Sending max RMS value 191.145150998 to audio socket
+100
+Frequency 3100.775194
+Min value 122.904898, Max value 183.676751, diff 60.771854
+Pct diff:  49.4462423257
+Using 168.483788 for smoke and co threshold
+Smoke pulse start 120, stop 150, duration 0.480000 seconds, time 2.176000
+Smoke pulse start 242, stop 271, duration 0.464000 seconds, time 4.120000
+
+##### of pulses in 5 SEC's      2
+Checking 2 num pulses for smoke
+0.75
+Smoke pulse start 0, stop 36, duration 0.576000 seconds, time 0.304000
+Smoke pulse start 61, stop 95, duration 0.544000 seconds, time 1.264000
+Smoke pulse start 119, stop 153, duration 0.544000 seconds, time 2.192000
+Smoke pulse start 241, stop 276, duration 0.560000 seconds, time 4.152000
+
+##### of pulses in 5 SEC's      4
+Checking 4 num pulses for smoke
+Checking case 1: (beep)-(beep)-(beep)--<long pause>--
+0.96
+0.928
+Found case 1
+Checking case 2: (beep)-(beep)--<long pause>--(beep)
+0.928
+No case 2
+Checking case 3: (beep)--<long pause>--(beep)-(beep)
+0.96
+No case 3
+Checking case 1: (beep)-(beep)-(beep)--<long pause>--
+0.928
+1.96
+Not case 1
+Checking case 2: (beep)-(beep)--<long pause>--(beep)
+1.96
+Found case 2
+Checking case 3: (beep)--<long pause>--(beep)-(beep)
+0.928
+No case 3
+Start or end of smoke pulses at the end of the sample, should be caught on the half window
+Size of pulse vals 139 + 139 = 327
+Pulses (177.493807,9.130132) Sampled (130.085285,9.448412)
+detection:Found a smoke alarm!
+0.5
+Checking 0 num pulses for CO
+Checking 0 num pulses for CO
+***   Found smoke alarm  ***
+100
+Frequency 3100.775194
+Min value 124.055101, Max value 183.676751, diff 59.621651
+Pct diff:  48.060620189
+Using 168.771339 for smoke and co threshold
+Smoke pulse start 284, stop 314, duration 0.480000 seconds, time 4.800000
+
+##### of pulses in 5 SEC's      1
+Checking 1 num pulses for smoke
+0.75
+Smoke pulse start 44, stop 79, duration 0.560000 seconds, time 1.000000
+Smoke pulse start 166, stop 200, duration 0.544000 seconds, time 2.944000
+Smoke pulse start 225, stop 259, duration 0.544000 seconds, time 3.888000
+Smoke pulse start 283, stop 317, duration 0.544000 seconds, time 4.816000
+
+##### of pulses in 5 SEC's      4
+Checking 4 num pulses for smoke
+Checking case 1: (beep)-(beep)-(beep)--<long pause>--
+1.944
+0.944
+Not case 1
+Checking case 2: (beep)-(beep)--<long pause>--(beep)
+0.944
+No case 2
+Checking case 3: (beep)--<long pause>--(beep)-(beep)
+1.944
+Found case 3
+Checking case 1: (beep)-(beep)-(beep)--<long pause>--
+0.944
+0.928
+Found case 1
+Checking case 2: (beep)-(beep)--<long pause>--(beep)
+0.928
+No case 2
+Checking case 3: (beep)--<long pause>--(beep)-(beep)
+0.944
+No case 3
+Not using 107 because it's too close to 100
+Not using 104 because it's too close to 100
+Size of pulse vals 137 + 137 = 327
+Pulses (178.258721,7.896110) Sampled (131.868212,8.397895)
+detection:Found a smoke alarm!
+Not using 103 because it's too close to 100
+Size of pulse vals 137 + 137 = 327
+Pulses (178.258721,7.896110) Sampled (130.650151,7.371218)
+detection:Found a smoke alarm!
+0.5
+Checking 0 num pulses for CO
+Checking 0 num pulses for CO
+***   Found smoke alarm  ***
