@@ -1,0 +1,73 @@
+#!/bin/sh 
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+
+# File which indicates if this is the first boot
+FTS_FILE='/etc/first_time_setup.txt'
+
+# If this is the first time booting, do the folllowing
+if [ ! -f $FTS_FILE ]; then
+
+    # Create the log directory
+    if [ ! -d /var/log/leeo ]; then
+        mkdir -p /var/log/leeo
+        echo "Creating /var/log/leeo directory" >> /var/log/leeo/system.log
+    else
+        echo "/var/log/leeo directory already exists" >> /var/log/leeo/system.log
+    fi
+
+    # Log the current time
+    cur_time=$(date)
+    echo "First time setup started at $cur_time" >> /var/log/leeo/system.log
+
+    # Generate a serial number for the device and set it as an environment var if it doesn't already exist
+    ret_code=$(grep -q "^DEVICESERIAL=" /etc/environment > /dev/null 2>&1)$?
+    if [ $ret_code -ne 0 ]; then
+        echo "No serial number found. Create one." >> /var/log/leeo/system.log
+        date +%s | sha256sum | head -c 10 | sed s:^:DEVICESERIAL=: | sed 's:$:\
+#:' >> /etc/environment
+    fi
+
+    # Install device packages
+    echo "Installing necessary Leeo packages..." >> /var/log/leeo/system.log 
+    nohup /etc/install_leeo_packages.sh 2>&1 &
+
+    # First time setup complete. Set file to indicate this on subsequent boots
+    touch $FTS_FILE
+    echo "First time setup completed" >> /var/log/leeo/system.log 
+
+else # Not the first boot
+    # Create the log directory if it doesn't exist
+    if [ ! -d /var/log/leeo ]; then
+        mkdir -p /var/log/leeo
+    fi
+
+    if [ ! -f /var/log/leeo/uptime.txt ]; then
+        echo "     #               Uptime | System                                     Boot up" >> /var/log/leeo/uptime.txt
+        echo "----------------------------+---------------------------------------------------" >> /var/log/leeo/uptime.txt
+    fi
+
+    # Enter a log entry for the last uptime
+    uprecords > /dev/null 2>&1
+    ret_code=$?
+    if [ $ret_code -eq 0 ]; then
+        uprecords -B | grep -E "^\s+2" >> /var/log/leeo/uptime.txt
+    else
+        cur_time=$(date)
+        echo "Could not get uptime at $cur_time." >> /var/log/leeo/uptime.txt
+    fi
+fi
+
+echo '1-004c' > /sys/bus/i2c/devices/1-004c/driver/unbind
+echo '1-0050' > /sys/bus/i2c/devices/1-0050/driver/unbind
+
+exit 0
+

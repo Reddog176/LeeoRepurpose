@@ -1,0 +1,32 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides: hciattach-on-boot
+# Required-Start: 
+# Required-Stop: 
+# Should-Start: 
+# Should-Stop: 
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Run hci attach on boot
+# Description: Run hciattach on boot to attach HCI to BlueZ stack via UART
+### END INIT INFO
+
+case "$1" in
+  start)
+    echo "Initializing bluetooth..."
+    /usr/local/sbin/hciconfig    
+    /usr/local/sbin/hciattach /dev/ttyO1 texas 3000000
+    /usr/local/sbin/hciconfig hci0 up
+    ;;
+  stop)
+    echo "Killing hciattach..."
+    pkill -xe hciattach
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+esac
+
+exit 0

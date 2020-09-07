@@ -1,0 +1,57 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          emergency-notification-handler
+# Required-Start:    $remote_fs networking $time
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Starts emergency-notification-handler
+# Description:       Starts emergency-notification-handler daemo to send urgent
+#                    signals to the site
+### END INIT INFO
+
+# Process name
+PROCNAME=emergency_notification_handler.rb
+PROCRUNDIR=/usr/lib/leeonl/customer_image/leeo_services/microphone/
+SERVICENAME=emergency-notification-handler
+PIDDIR=/var/run/leeo/
+PIDFILE=$PIDDIR$SERVICENAME.pid
+DAEMON=$PROCRUNDIR$PROCNAME
+
+if [ ! -d "$PIDDIR" ]; then
+  mkdir $PIDDIR
+fi
+
+# The following part carries out specific functions depending on arguments.
+case "$1" in
+  start)
+    echo "Starting $SERVICENAME"
+    echo $DAEMON
+    /sbin/start-stop-daemon --start --quiet --background --make-pidfile --pidfile $PIDFILE --name emergency_notif --startas $DAEMON
+    echo "$SERVICENAME started"
+    ;;
+  stop)
+    echo -n "Stopping $SERVICENAME"
+    /sbin/start-stop-daemon --stop --pidfile $PIDFILE
+    echo "."
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+  status)
+    STATUS=$(/sbin/start-stop-daemon --status --pidfile $PIDFILE --name emergency_notif > /dev/null)$?
+    if [ $STATUS -eq 0 ]; then
+      echo "$SERVICENAME is running"
+    else
+      echo "$SERVICENAME is not running"
+    fi 
+    ;;
+  *)
+    echo "Usage: /etc/init.d/$SERVICENAME {start|stop|restart|status}"
+    exit 1
+    ;;
+esac
+
+exit 0
+

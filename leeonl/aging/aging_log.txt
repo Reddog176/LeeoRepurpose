@@ -1,0 +1,10 @@
+Begin_Date: 20000101
+Begin_Time: 0003
+End_Time=0003
+EMMC_Result=PASS
+EEPROM_Result=FAILED
+Humidity_Result=null
+Temperature_Result=null
+OFN_Result=null
+ALS_Result=null
+Reset_Result=null

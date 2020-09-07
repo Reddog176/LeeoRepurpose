@@ -1,0 +1,21 @@
+
+
+#This gets the CO reading (0x0E=14). Gets 1byte
+i2cset -y 1 0x4c 0x0E
+i2cget -y 1 0x4c 0x0E b
+
+#This gets the Ux reading (0x0F=15). Gets 2bytes
+i2cset -y 1 0x4c 0x0F
+i2cget -y 1 0x4c 0x0F w
+
+#This gets the RH resistor value (0x10=16). Gets 2bytes
+i2cset -y 1 0x4c 0x10
+i2cget -y 1 0x4c 0x10 w
+
+#This gets the PWM value (0x11=17). Gets 2bytes
+i2cset -y 1 0x4c 0x11
+i2cget -y 1 0x4c 0x11 w
+
+#This gets the setpointRH value (0x12=18). Gets 2bytes
+i2cset -y 1 0x4c 0x12
+i2cget -y 1 0x4c 0x12 w
